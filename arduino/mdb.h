@@ -1,15 +1,15 @@
 /**
  * Project: MateDealer
  * File name: mdb.h
- * Description:  MultiDropBus methods. 
+ * Description:  MultiDropBus methods.
  *               See www.vending.org/technology/MDB_Version_4-2.pdf for Protocoll information.
- *   
+ *
  * @author bouni
- * @email bouni@owee.de  
- *   
+ * @email bouni@owee.de
+ *
  * @see The GNU Public License (GPL)
  */
- 
+
 #ifndef MDB_H
 #define MDB_H
 
@@ -25,7 +25,7 @@
 #define FALSE       0
 #endif
 
-#define DEBUG       0
+#define DEBUG       1
 
 #define MDB_USART   1
 
@@ -44,9 +44,9 @@ enum MDB_CMD {MDB_IDLE,MDB_RESET = 0x10,MDB_SETUP,MDB_POLL,MDB_VEND,MDB_READER};
 //---------------------------------------------------------------------------
 enum POLL_REPLY {	MDB_REPLY_ACK, MDB_REPLY_JUST_RESET, MDB_REPLY_READER_CFG, MDB_REPLY_DISPLAY_REQ, MDB_REPLY_BEGIN_SESSION,
                 MDB_REPLY_SESSION_CANCEL_REQ, MDB_REPLY_VEND_APPROVED, MDB_REPLY_VEND_DENIED, MDB_REPLY_END_SESSION,
-                MDB_REPLY_CANCELED, MDB_REPLY_PERIPHERIAL_ID, MDB_REPLY_ERROR, MDB_REPLY_CMD_OUT_SEQUENCE 
+                MDB_REPLY_CANCELED, MDB_REPLY_PERIPHERIAL_ID, MDB_REPLY_ERROR, MDB_REPLY_CMD_OUT_SEQUENCE
                 };
-                
+
 typedef struct {
     uint8_t feature_level;
     uint8_t dispaly_cols;
